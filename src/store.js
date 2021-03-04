@@ -12,7 +12,9 @@ export default new Vuex.Store({
             state.counter++;
         },
         DECREASE: (state) => {
-            state.counter--;
+            if (state.counter > 0){
+                state.counter--;
+            }
         }
     }
 })
