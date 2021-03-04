@@ -1,6 +1,6 @@
 # Frontend Mentor - Rock, Paper, Scissors
 
-### IMPORTANT: Look at the wiki to see the to-do lists where you can find the steps I followed to create this website
+### IMPORTANT: Look at the wiki to see the to-do lists, where you can find the steps I followed to create this website
 
 ## The challenge
 
