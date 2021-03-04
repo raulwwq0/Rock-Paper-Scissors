@@ -1,0 +1,46 @@
+@import 'variables';
+
+#header{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 5vh;
+    width: 45vw;
+    text-transform: uppercase;
+    padding: 15px;
+    border: 3px solid $header-outline;
+    border-radius: 15px;
+    line-height: 30px;
+
+    h1{
+        display: block;
+        color: white;
+        font-family: $semi-bold;
+        width: 140px;
+    }
+
+    #score-box{
+        display:flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: space-around;
+        background-color: white;
+        color: $score-text;
+        width: 120px;
+        height: 100px;
+        font-size: 13px;
+        font-family: $semi-bold;
+        letter-spacing: 2px;
+        border-radius: 15px;
+
+        #score{
+            height: 50px;
+            font-size: 50px;
+            font-family: $bold;
+            color: $dark-text
+
+        }
+    }
+}

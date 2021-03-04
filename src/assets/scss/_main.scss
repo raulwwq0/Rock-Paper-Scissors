@@ -1,0 +1,44 @@
+@import 'variables';
+
+@font-face{
+    font-family: "BarlowSemi";
+    src:url('../fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf');
+}
+
+@font-face{
+    font-family: "BarlowBold";
+    src:url('../fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf');
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    background: $bg-gradient;
+    background-attachment: fixed;
+}
+
+.btn{
+    cursor: pointer;
+    display: block;
+    background-color: white;
+    background-clip: padding-box;
+    border-radius: 9999px;
+    width: 120px;
+    height: 120px;
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}

@@ -1,0 +1,39 @@
+@import 'variables';
+
+#rules{
+    display: block;
+    position: absolute;
+    top: -570px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: white;
+    width: 25vw;
+    padding: 3vw;
+    border-radius: 10px;
+
+    .close-btn{
+        cursor: pointer;
+    }
+
+    #rules-img{
+        display: block;
+        margin: 0 auto;
+    }
+    
+    #title{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        font-family: $semi-bold;
+        font-size: 25px;
+        margin-bottom: 50px;
+
+        img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

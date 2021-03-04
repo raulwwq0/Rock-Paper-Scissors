@@ -1,0 +1,36 @@
+@import 'variables';
+
+footer{
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .menu-btn{
+        cursor: pointer;
+        text-transform: uppercase;
+        font-family: $semi-bold;
+        font-size: 16px;
+        letter-spacing: 2px;
+        color: white;
+        background-color: transparent;
+        border: 2px solid $header-outline;
+        border-radius: 10px;
+        padding: 5px 20px;
+    }
+
+    #rules-btn{
+        display: block;
+        position:absolute;
+        right: 10vw;
+        bottom: 3vh;
+    }
+
+    #game-mode-btn{
+        display: block;
+        position:absolute;
+        bottom: 3vh;
+        left: 10vw;
+    }
+
+}

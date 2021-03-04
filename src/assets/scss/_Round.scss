@@ -1,0 +1,77 @@
+@import 'variables';
+
+#round{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: white;
+    font-family: $semi-bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+
+    #your-pick,
+    #house-pick{
+        width: 25%;
+        height: 40vh;
+        position: relative;
+
+        .picks{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(0,0,0, 0.25);
+            border-radius: 9999px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    }
+
+    .your-btn-picked,
+    .house-btn-picked{
+        top: 60px;
+        left: 60px;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        width: 160px !important;
+        height: 160px !important;
+        img{
+            width: 70px;
+        }
+    }
+
+    .paper-btn{
+        border: 30px solid $paper-border;
+    }
+    
+    .rock-btn{
+        border: 30px solid $rock-border;
+    }
+    
+    .scissors-btn{
+        border: 30px solid $scissors-border;
+    }
+
+    #result{
+        display: flex;
+        align-items: center;
+        h1{
+            font-size: 50px;
+        }
+        .again-btn{
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: $semi-bold;
+            font-size: 15px;
+            letter-spacing: 3px;
+            color: $dark-text;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 10px 50px;
+            margin-top: 20px;
+        }
+    }
+}
