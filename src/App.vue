@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <HeaderComponent/>
-    <router-view 
-      @pick="pick=$event"
-      :pickSelected="this.pick"
-    />
+    <vue-page-transition name="zoom">
+      <router-view
+        @pick="pick=$event"
+        :pickSelected="this.pick"
+      />
+    </vue-page-transition>
     <FooterComponent />
   </div>
 </template>

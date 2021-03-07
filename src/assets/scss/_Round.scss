@@ -17,24 +17,101 @@
         width: 25%;
         height: 40vh;
         position: relative;
+        h4{
+            display:block;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
 
-        .picks{
-            width: 200px;
-            height: 200px;
-            background-color: rgba(0,0,0, 0.25);
-            border-radius: 9999px;
-            margin: 0 auto;
-            margin-top: 50px;
+        .your-picks,
+        .house-picks{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+        
+
+            .pre-shadow{
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+
+                width: 200px;
+                height: 200px;
+                background-color: rgba(0,0,0, 0.25);
+                border-radius: 9999px;
+            }
+
+            
+
+            .win-shadow,
+            .lose-shadow{
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                width: 200px !important;
+                height: 200px !important;
+                z-index: -1;
+                border-radius: 9999px;
+                background-color: rgba(255,255,255, 0.025);
+                opacity: 0;
+
+                .circle-1{
+                    display: flex;
+                    align-items: center;
+                    width: 150px;
+                    height: 150px;
+                    background-color: pink;
+                    margin: 0 auto;
+                    border-radius: 9999px;
+                    background-color: rgba(255,255,255, 0.05);
+                }
+
+                .circle-2{
+                    display: flex;
+                    align-items: center;
+                    width: 100px;
+                    height: 100px;
+                    background-color: red;
+                    margin: 0 auto;
+                    border-radius: 9999px;
+                    background-color: rgba(255,255,255, 0.1);
+                }
+
+                .circle-3{
+                    width: 50px;
+                    height: 50px;
+                    background-color: transparent;
+                    margin: 0 auto;
+                    border-radius: 9999px;
+                }
+            }
         }
     }
 
     .your-btn-picked,
     .house-btn-picked{
-        top: 60px;
-        left: 60px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
         right: 0;
         bottom: 0;
-        margin: 0;
+        margin: auto;
         width: 160px !important;
         height: 160px !important;
         img{
@@ -43,20 +120,25 @@
     }
 
     .paper-btn{
-        border: 30px solid $paper-border;
+        border: 25px solid $paper-border;
     }
     
     .rock-btn{
-        border: 30px solid $rock-border;
+        border: 25px solid $rock-border;
     }
     
     .scissors-btn{
-        border: 30px solid $scissors-border;
+        border: 25px solid $scissors-border;
     }
 
     #result{
-        display: flex;
-        align-items: center;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        height: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
         h1{
             font-size: 50px;
         }
@@ -74,4 +156,6 @@
             margin-top: 20px;
         }
     }
+
+    
 }
