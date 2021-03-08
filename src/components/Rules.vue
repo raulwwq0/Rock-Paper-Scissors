@@ -11,6 +11,14 @@
         id="rules-img"
         src="../assets/images/image-rules.svg"
         alt="Rules"
+        v-if="!$store.state.extendedMode"
+      />
+
+      <img
+        id="rules-img"
+        src="../assets/images/image-rules-bonus.svg"
+        alt="Rules"
+        v-if="$store.state.extendedMode"
       />
     </div>
 </template>

@@ -67,11 +67,17 @@ body {
   border-radius: 15px;
   line-height: 30px;
 }
-#header h1 {
+#header .logo {
+  height: 100px;
   display: block;
-  color: white;
-  font-family: BarlowSemi;
-  width: 140px;
+  position: relative;
+}
+#header .logo img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
 }
 #header #score-box {
   display: flex;
@@ -170,16 +176,16 @@ body {
 
 .lizard-btn-extended {
   position: absolute;
-  bottom: -60px !important;
-  left: -5px !important;
+  bottom: -60px;
+  left: -5px;
   border: 20px solid #834fe3;
   box-shadow: 0px 7px 2px #ccc inset, 0px 7px 0px #603ba5;
 }
 
 .spock-btn-extended {
   position: absolute;
-  top: 60px !important;
-  left: -80px !important;
+  top: 60px;
+  left: -80px;
   border: 20px solid #40b9ce;
   box-shadow: 0px 7px 2px #ccc inset, 0px 7px 0px #2c8dad;
 }
@@ -409,6 +415,12 @@ footer #game-mode-btn {
 }
 #round .scissors-btn {
   border: 25px solid #eca922;
+}
+#round .lizard-btn-extended {
+  border: 25px solid #834fe3;
+}
+#round .spock-btn-extended {
+  border: 25px solid #40b9ce;
 }
 #round #result {
   display: block;

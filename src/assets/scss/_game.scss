@@ -72,8 +72,8 @@
 
 .lizard-btn-extended{
     position: absolute;
-    bottom: -60px !important;
-    left: -5px !important;
+    bottom: -60px;
+    left: -5px;
     border: 20px solid $lizard-border;
     box-shadow: 0px 7px 2px #ccc inset, 
                 0px 7px 0px $lizard-shadow;
@@ -81,8 +81,8 @@
 
 .spock-btn-extended{
     position: absolute;
-    top: 60px !important;
-    left: -80px !important;
+    top: 60px;
+    left: -80px;
     border: 20px solid $spock-border;
     box-shadow: 0px 7px 2px #ccc inset, 
                 0px 7px 0px $spock-shadow;

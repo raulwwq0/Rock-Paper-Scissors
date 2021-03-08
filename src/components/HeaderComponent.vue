@@ -1,17 +1,35 @@
 <template>
-    <header id="header">
-        <h1>Rock Paper Scissors</h1>
-        <div id="score-box">
-            Score
+  <header id="header">
+    <div class="logo">
+      <img
+        id="classic-logo"
+        src="../assets/images/logo.svg"
+        alt="Rock, Paper, Scissors"
+        v-if="!$store.state.extendedMode"
+      />
+      <img
+        id="extended-logo"
+        src="../assets/images/logo-bonus.svg"
+        alt="Rock, Paper, Scissors, Lizard, Spock"
+        v-if="$store.state.extendedMode"
+      />
+    </div>
 
-            <span id="score">{{ $store.state.counter }}</span>
-        </div>
-    </header>
+    <div id="score-box">
+      Score
+
+      <span id="score" v-if="!$store.state.extendedMode">{{
+        $store.state.counter
+      }}</span>
+      <span id="score" v-if="$store.state.extendedMode">{{
+        $store.state.extendedCounter
+      }}</span>
+    </div>
+  </header>
 </template>
 
 <script>
 export default {
-    name: 'HeaderComponent',
-
-}
+  name: "HeaderComponent",
+};
 </script>

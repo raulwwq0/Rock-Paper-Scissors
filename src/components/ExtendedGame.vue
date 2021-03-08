@@ -26,6 +26,20 @@
 
 <script>
 export default {
-    name: 'ExtendedGame',
-}
+  name: "ExtendedGame",
+  data() {
+    return {
+      pick: null,
+    };
+  },
+  methods: {
+    btnPicked(pick) {
+      this.pick = pick;
+      this.$emit("pick", this.pick);
+    },
+  },
+  updated() {
+    this.btnPicked();
+  },
+};
 </script>

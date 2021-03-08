@@ -14,11 +14,18 @@
     border-radius: 15px;
     line-height: 30px;
 
-    h1{
+    .logo{
+        height: 100px;
         display: block;
-        color: white;
-        font-family: $semi-bold;
-        width: 140px;
+        position: relative;
+
+        img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 100%;
+        }
     }
 
     #score-box{
