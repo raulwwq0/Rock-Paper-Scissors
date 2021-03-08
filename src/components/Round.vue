@@ -27,9 +27,7 @@
 
         <div class="win-shadow" v-if="youWin">
           <div class="circle-1">
-            <div class="circle-2">
-              <div class="circle-3"></div>
-            </div>
+            <div class="circle-2"></div>
           </div>
         </div>
       </div>
@@ -71,9 +69,7 @@
 
         <div class="lose-shadow" v-if="youLose">
           <div class="circle-1">
-            <div class="circle-2">
-              <div class="circle-3"></div>
-            </div>
+            <div class="circle-2"></div>
           </div>
         </div>
       </div>

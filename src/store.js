@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state:{
         counter: 0,
+        extendedMode: false,
     },
     mutations:{
         INCREASE: (state) => {
@@ -15,6 +16,9 @@ export default new Vuex.Store({
             if (state.counter > 0){
                 state.counter--;
             }
+        },
+        CHANGEMODE: (state) => {
+            state.extendedMode = !state.extendedMode;
         }
     }
 })

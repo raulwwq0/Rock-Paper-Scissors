@@ -63,8 +63,8 @@
                 margin: auto;
                 display: flex;
                 align-items: center;
-                width: 200px !important;
-                height: 200px !important;
+                width: 215px !important;
+                height: 215px !important;
                 z-index: -1;
                 border-radius: 9999px;
                 background-color: rgba(255,255,255, 0.025);
@@ -73,9 +73,8 @@
                 .circle-1{
                     display: flex;
                     align-items: center;
-                    width: 150px;
-                    height: 150px;
-                    background-color: pink;
+                    width: 165px;
+                    height: 165px;
                     margin: 0 auto;
                     border-radius: 9999px;
                     background-color: rgba(255,255,255, 0.05);
@@ -84,20 +83,11 @@
                 .circle-2{
                     display: flex;
                     align-items: center;
-                    width: 100px;
-                    height: 100px;
-                    background-color: red;
+                    width: 115px;
+                    height: 115px;
                     margin: 0 auto;
                     border-radius: 9999px;
-                    background-color: rgba(255,255,255, 0.1);
-                }
-
-                .circle-3{
-                    width: 50px;
-                    height: 50px;
-                    background-color: transparent;
-                    margin: 0 auto;
-                    border-radius: 9999px;
+                    background-color: rgba(255,255,255, 0.075);
                 }
             }
         }
@@ -154,6 +144,11 @@
             border-radius: 10px;
             padding: 10px 50px;
             margin-top: 20px;
+            transition: all 300ms;
+        }
+
+        .again-btn:hover{
+            color: $rock-border;
         }
     }
 

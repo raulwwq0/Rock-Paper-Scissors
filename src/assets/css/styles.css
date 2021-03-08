@@ -112,7 +112,19 @@ body {
   height: 300px;
 }
 
-.paper-btn {
+#extended-game {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 12vh;
+  background-image: url("../images/bg-pentagon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+}
+
+.paper-btn,
+.paper-btn-extended {
   position: absolute;
   top: -70px;
   left: -60px;
@@ -120,7 +132,13 @@ body {
   box-shadow: 0px 7px 2px #ccc inset, 0px 7px 0px #2945c3;
 }
 
-.rock-btn {
+.paper-btn-extended {
+  top: 60px !important;
+  left: 330px !important;
+}
+
+.rock-btn,
+.rock-btn-extended {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -130,12 +148,40 @@ body {
   box-shadow: 0px 7px 2px #ccc inset, 0px 7px 0px #9f1536;
 }
 
-.scissors-btn {
+.rock-btn-extended {
+  bottom: -60px !important;
+  left: 245px !important;
+  margin: 0px;
+}
+
+.scissors-btn,
+.scissors-btn-extended {
   position: absolute;
   top: -70px;
   right: -60px;
   border: 20px solid #eca922;
   box-shadow: 0px 7px 2px #ccc inset, 0px 7px 0px #cc6c16;
+}
+
+.scissors-btn-extended {
+  top: -80px !important;
+  right: 110px !important;
+}
+
+.lizard-btn-extended {
+  position: absolute;
+  bottom: -60px !important;
+  left: -5px !important;
+  border: 20px solid #834fe3;
+  box-shadow: 0px 7px 2px #ccc inset, 0px 7px 0px #603ba5;
+}
+
+.spock-btn-extended {
+  position: absolute;
+  top: 60px !important;
+  left: -80px !important;
+  border: 20px solid #40b9ce;
+  box-shadow: 0px 7px 2px #ccc inset, 0px 7px 0px #2c8dad;
 }
 
 /*
@@ -161,6 +207,12 @@ footer .menu-btn {
   border: 2px solid #606e85;
   border-radius: 10px;
   padding: 5px 20px;
+  transition: all 300ms ease-in-out;
+}
+footer .menu-btn:hover {
+  color: #3b4363;
+  background-color: white;
+  border: 2px solid white;
 }
 footer #rules-btn {
   display: block;
@@ -294,8 +346,8 @@ footer #game-mode-btn {
   margin: auto;
   display: flex;
   align-items: center;
-  width: 200px !important;
-  height: 200px !important;
+  width: 215px !important;
+  height: 215px !important;
   z-index: -1;
   border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.025);
@@ -311,9 +363,8 @@ footer #game-mode-btn {
 #round #house-pick .house-picks .lose-shadow .circle-1 {
   display: flex;
   align-items: center;
-  width: 150px;
-  height: 150px;
-  background-color: pink;
+  width: 165px;
+  height: 165px;
   margin: 0 auto;
   border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.05);
@@ -328,26 +379,11 @@ footer #game-mode-btn {
 #round #house-pick .house-picks .lose-shadow .circle-2 {
   display: flex;
   align-items: center;
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  width: 115px;
+  height: 115px;
   margin: 0 auto;
   border-radius: 9999px;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-#round #your-pick .your-picks .win-shadow .circle-3,
-#round #your-pick .your-picks .lose-shadow .circle-3,
-#round #your-pick .house-picks .win-shadow .circle-3,
-#round #your-pick .house-picks .lose-shadow .circle-3,
-#round #house-pick .your-picks .win-shadow .circle-3,
-#round #house-pick .your-picks .lose-shadow .circle-3,
-#round #house-pick .house-picks .win-shadow .circle-3,
-#round #house-pick .house-picks .lose-shadow .circle-3 {
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  margin: 0 auto;
-  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.075);
 }
 #round .your-btn-picked,
 #round .house-btn-picked {
@@ -398,6 +434,10 @@ footer #game-mode-btn {
   border-radius: 10px;
   padding: 10px 50px;
   margin-top: 20px;
+  transition: all 300ms;
+}
+#round #result .again-btn:hover {
+  color: #dd405d;
 }
 
 /*# sourceMappingURL=styles.css.map */
