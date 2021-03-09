@@ -26,13 +26,15 @@
             margin: auto;
             height: 100%;
         }
+
+        #extended-logo{
+            opacity: 0;
+        }
     }
 
     #score-box{
-        display:flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: space-around;
+        display: block;
+        position: relative;
         background-color: white;
         color: $score-text;
         width: 120px;
@@ -42,12 +44,33 @@
         letter-spacing: 2px;
         border-radius: 15px;
 
+        .score-text{
+            display: block;
+            position: absolute;
+            width: 44px;
+            top: 5px;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
         #score{
             height: 50px;
             font-size: 50px;
             font-family: $bold;
-            color: $dark-text
+            text-align: center;
+            color: $dark-text;
+            display: block;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 30px;
+        }
 
+        .extended-score{
+            opacity: 0;
         }
     }
 }

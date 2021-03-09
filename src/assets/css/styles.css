@@ -79,11 +79,12 @@ body {
   margin: auto;
   height: 100%;
 }
+#header .logo #extended-logo {
+  opacity: 0;
+}
 #header #score-box {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: space-around;
+  display: block;
+  position: relative;
   background-color: white;
   color: #2a46c0;
   width: 120px;
@@ -93,11 +94,31 @@ body {
   letter-spacing: 2px;
   border-radius: 15px;
 }
+#header #score-box .score-text {
+  display: block;
+  position: absolute;
+  width: 44px;
+  top: 5px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
 #header #score-box #score {
   height: 50px;
   font-size: 50px;
   font-family: BarlowBold;
+  text-align: center;
   color: #3b4363;
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 30px;
+}
+#header #score-box .extended-score {
+  opacity: 0;
 }
 
 /*

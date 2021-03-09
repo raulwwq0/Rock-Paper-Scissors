@@ -30,6 +30,25 @@ export default {
 
     changeMode() {
       this.$store.commit("CHANGEMODE");
+      const headerTimeline = gsap.timeline();
+
+      if(this.$store.state.extendedMode){
+        headerTimeline.to("#header", {duration: 0.3, y: "-40vh"})
+              .to("#classic-logo", {duration: 0, opacity: 0})
+              .to("#extended-logo", {duration: 0, opacity: 1}, '<0')
+              .to(".classic-score", {duration: 0, opacity: 0}, '<0')
+              .to(".extended-score", {duration: 0, opacity: 1}, '<0')
+              .to("#header", {duration: 0.3, y: "0vh"});
+      } else {
+        headerTimeline.to("#header", {duration: 0.3, y: "-40vh"})
+              .to("#extended-logo", {duration: 0, opacity: 0})
+              .to("#classic-logo", {duration: 0, opacity: 1}, '<0')
+              .to(".extended-score", {duration: 0, opacity: 0}, '<0')
+              .to(".classic-score", {duration: 0, opacity: 1}, '<0')
+              .to("#header", {duration: 0.3, y: "0vh"});
+      }
+
+    
     }
   },
   computed: {

@@ -5,23 +5,21 @@
         id="classic-logo"
         src="../assets/images/logo.svg"
         alt="Rock, Paper, Scissors"
-        v-if="!$store.state.extendedMode"
       />
       <img
         id="extended-logo"
         src="../assets/images/logo-bonus.svg"
         alt="Rock, Paper, Scissors, Lizard, Spock"
-        v-if="$store.state.extendedMode"
       />
     </div>
 
     <div id="score-box">
-      Score
+      <span class="score-text">Score</span>
 
-      <span id="score" v-if="!$store.state.extendedMode">{{
+      <span id="score" class="classic-score">{{
         $store.state.counter
       }}</span>
-      <span id="score" v-if="$store.state.extendedMode">{{
+      <span id="score" class="extended-score">{{
         $store.state.extendedCounter
       }}</span>
     </div>
