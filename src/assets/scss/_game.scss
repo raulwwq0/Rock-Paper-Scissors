@@ -33,8 +33,8 @@
 }
 
 .paper-btn-extended{
-    top: 60px !important;
-    left: 330px !important;
+    top: 60px;
+    left: 330px;
 }
 
 .rock-btn,
@@ -50,8 +50,8 @@
 }
 
 .rock-btn-extended{
-    bottom: -60px !important;
-    left: 245px !important;
+    bottom: -60px;
+    left: 245px;
     margin: 0px;
 }
 
@@ -66,8 +66,10 @@
 }
 
 .scissors-btn-extended{
-    top: -80px !important;
-    right: 110px !important;
+    top: -80px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
 }
 
 .lizard-btn-extended{

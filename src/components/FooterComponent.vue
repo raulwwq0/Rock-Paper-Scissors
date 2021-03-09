@@ -25,7 +25,11 @@ export default {
   },
   methods: {
     showRules(){
-      gsap.to("#rules", {duration: 0.5, y: "-75vh", ease: 'power1', opacity: 1});
+      if(screen.width > 670) {
+        gsap.to("#rules", {duration: 0.5, y: "-75vh", ease: 'power1', opacity: 1});
+      } else {
+        gsap.to("#rules", {duration: 0.5, y: "-100vh", ease: 'power1', opacity: 1});
+      }
     },
 
     changeMode() {

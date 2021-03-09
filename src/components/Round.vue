@@ -203,12 +203,23 @@ export default {
     roundAnimations() {
       const roundTimeline = gsap.timeline({ defaults: { duration: 1 } });
 
+      if(screen.width > 670){
       roundTimeline
         .to("#your-pick", { x: "-10vw", delay: 1.5, ease: "elastic" })
         .to("#house-pick", { x: "10vw", delay: 1.5, ease: "elastic" }, 0)
         .to(".win-shadow", { opacity: 1, scale: 3, ease: "back" }, "<0")
         .to(".lose-shadow", { opacity: 1, scale: 3, ease: "back" }, "<0")
         .from("#result", { opacity: 0, ease: "circ" }, "<.3");
+      } else {
+      roundTimeline
+        .to("#your-pick", { scale:1.1, delay: 1.5, ease: "elastic" })
+        .to("#house-pick", { scale:1.1, delay: 1.5, ease: "elastic" }, 0)
+        .to(".win-shadow", { opacity: 1, scale: 3, ease: "back" }, "<0")
+        .to(".lose-shadow", { opacity: 1, scale: 3, ease: "back" }, "<0")
+        .from("#result", { opacity: 0, ease: "circ" }, "<.3");
+      }
+
+      
     },
   },
   computed: {

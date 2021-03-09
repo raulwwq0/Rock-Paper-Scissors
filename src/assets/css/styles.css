@@ -25,6 +25,7 @@ html {
 body {
   background: radial-gradient(circle at center 0px, #1f3756, #141539);
   background-attachment: fixed;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -160,8 +161,8 @@ body {
 }
 
 .paper-btn-extended {
-  top: 60px !important;
-  left: 330px !important;
+  top: 60px;
+  left: 330px;
 }
 
 .rock-btn,
@@ -176,8 +177,8 @@ body {
 }
 
 .rock-btn-extended {
-  bottom: -60px !important;
-  left: 245px !important;
+  bottom: -60px;
+  left: 245px;
   margin: 0px;
 }
 
@@ -191,8 +192,10 @@ body {
 }
 
 .scissors-btn-extended {
-  top: -80px !important;
-  right: 110px !important;
+  top: -80px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
 }
 
 .lizard-btn-extended {
@@ -265,13 +268,15 @@ footer #game-mode-btn {
   display: block;
   position: absolute;
   z-index: 10;
-  top: 0;
+  opacity: 0;
   left: 0;
   right: 0;
   margin: auto;
   background-color: white;
   width: 25vw;
+  height: auto;
   padding: 3vw;
+  padding-bottom: 5vh;
   border-radius: 10px;
 }
 #rules .close-btn {
@@ -280,6 +285,10 @@ footer #game-mode-btn {
 #rules #rules-img {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 #rules #title {
   display: flex;
@@ -339,8 +348,8 @@ footer #game-mode-btn {
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 300px;
-  height: 300px;
+  width: auto;
+  height: auto;
 }
 #round #your-pick .your-picks .pre-shadow,
 #round #your-pick .house-picks .pre-shadow,
@@ -373,8 +382,8 @@ footer #game-mode-btn {
   margin: auto;
   display: flex;
   align-items: center;
-  width: 215px !important;
-  height: 215px !important;
+  width: 215px;
+  height: 215px;
   z-index: -1;
   border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.025);
@@ -392,6 +401,7 @@ footer #game-mode-btn {
   align-items: center;
   width: 165px;
   height: 165px;
+  z-index: -1;
   margin: 0 auto;
   border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.05);
@@ -408,6 +418,7 @@ footer #game-mode-btn {
   align-items: center;
   width: 115px;
   height: 115px;
+  z-index: -1;
   margin: 0 auto;
   border-radius: 9999px;
   background-color: rgba(255, 255, 255, 0.075);
@@ -421,8 +432,8 @@ footer #game-mode-btn {
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 160px !important;
-  height: 160px !important;
+  width: 160px;
+  height: 160px;
 }
 #round .your-btn-picked img,
 #round .house-btn-picked img {
@@ -471,6 +482,266 @@ footer #game-mode-btn {
 }
 #round #result .again-btn:hover {
   color: #dd405d;
+}
+
+/*
+- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
+
+*/
+@media (max-width: 1000px) {
+  #rules {
+    width: 35vw;
+  }
+
+  #round .your-btn-picked,
+#round .house-btn-picked {
+    width: 100px;
+    height: 100px;
+  }
+  #round #your-pick .your-picks .pre-shadow,
+#round #your-pick .house-picks .pre-shadow,
+#round #house-pick .your-picks .pre-shadow,
+#round #house-pick .house-picks .pre-shadow {
+    width: 100px;
+    height: 100px;
+  }
+  #round #your-pick .your-picks .win-shadow,
+#round #your-pick .your-picks .lose-shadow,
+#round #your-pick .house-picks .win-shadow,
+#round #your-pick .house-picks .lose-shadow,
+#round #house-pick .your-picks .win-shadow,
+#round #house-pick .your-picks .lose-shadow,
+#round #house-pick .house-picks .win-shadow,
+#round #house-pick .house-picks .lose-shadow {
+    width: 160px;
+    height: 160px;
+  }
+  #round #your-pick .your-picks .win-shadow .circle-1,
+#round #your-pick .your-picks .lose-shadow .circle-1,
+#round #your-pick .house-picks .win-shadow .circle-1,
+#round #your-pick .house-picks .lose-shadow .circle-1,
+#round #house-pick .your-picks .win-shadow .circle-1,
+#round #house-pick .your-picks .lose-shadow .circle-1,
+#round #house-pick .house-picks .win-shadow .circle-1,
+#round #house-pick .house-picks .lose-shadow .circle-1 {
+    width: 120px;
+    height: 120px;
+  }
+  #round #your-pick .your-picks .win-shadow .circle-2,
+#round #your-pick .your-picks .lose-shadow .circle-2,
+#round #your-pick .house-picks .win-shadow .circle-2,
+#round #your-pick .house-picks .lose-shadow .circle-2,
+#round #house-pick .your-picks .win-shadow .circle-2,
+#round #house-pick .your-picks .lose-shadow .circle-2,
+#round #house-pick .house-picks .win-shadow .circle-2,
+#round #house-pick .house-picks .lose-shadow .circle-2 {
+    width: 80px;
+    height: 80px;
+  }
+  #round .paper-btn,
+#round .rock-btn,
+#round .scissors-btn,
+#round .lizard-btn-extended,
+#round .spock-btn-extended {
+    border-width: 15px;
+  }
+  #round .paper-btn img,
+#round .rock-btn img,
+#round .scissors-btn img,
+#round .lizard-btn-extended img,
+#round .spock-btn-extended img {
+    width: 40%;
+  }
+  #round #result h1 {
+    font-size: 35px;
+  }
+  #round #result .again-btn {
+    font-size: 13px;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 670px) {
+  #original-game {
+    width: 250px;
+    height: 250px;
+  }
+
+  #extended-game {
+    width: 300px;
+    height: 300px;
+    margin-top: 15vh;
+  }
+
+  .btn {
+    width: 90px;
+    height: 90px;
+    border-width: 15px;
+  }
+  .btn img {
+    width: 40%;
+  }
+
+  .scissors-btn,
+.scissors-btn-extended {
+    top: -70px;
+    box-shadow: 0px 4px 0px #cc6c16;
+  }
+
+  .lizard-btn-extended {
+    box-shadow: 0px 4px 0px #603ba5;
+  }
+
+  .lizard-btn-extended,
+.rock-btn-extended {
+    bottom: -50px;
+  }
+
+  .rock-btn,
+.rock-btn-extended {
+    left: 185px;
+    box-shadow: 0px 4px 0px #9f1536;
+  }
+
+  .paper-btn-extended,
+.spock-btn-extended {
+    top: 50px;
+  }
+
+  .paper-btn,
+.paper-btn-extended {
+    left: 255px;
+    box-shadow: 0px 4px 0px #2945c3;
+  }
+
+  .spock-btn-extended {
+    left: -70px;
+    box-shadow: 0px 4px 0px #2c8dad;
+  }
+
+  h4 {
+    bottom: 0vh;
+  }
+
+  #rules {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+  #rules .close-btn {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: 10vh;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+  #rules #rules-img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+  }
+  #rules #title {
+    display: block;
+    margin-top: 10vh;
+  }
+  #rules #title h2 {
+    text-align: center;
+  }
+
+  #round {
+    display: grid;
+    grid-template-areas: "user house" "result result";
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: 40vh 20vh;
+    justify-items: center;
+  }
+  #round #your-pick {
+    grid-area: user;
+    width: 100%;
+  }
+  #round #house-pick {
+    grid-area: house;
+    width: 100%;
+  }
+  #round #your-pick,
+#round #house-pick {
+    height: 30vh;
+  }
+  #round #your-pick .your-picks .win-shadow,
+#round #your-pick .your-picks .lose-shadow,
+#round #your-pick .house-picks .win-shadow,
+#round #your-pick .house-picks .lose-shadow,
+#round #house-pick .your-picks .win-shadow,
+#round #house-pick .your-picks .lose-shadow,
+#round #house-pick .house-picks .win-shadow,
+#round #house-pick .house-picks .lose-shadow {
+    width: 100px;
+    height: 100px;
+  }
+  #round #your-pick .your-picks .win-shadow .circle-1,
+#round #your-pick .your-picks .lose-shadow .circle-1,
+#round #your-pick .house-picks .win-shadow .circle-1,
+#round #your-pick .house-picks .lose-shadow .circle-1,
+#round #house-pick .your-picks .win-shadow .circle-1,
+#round #house-pick .your-picks .lose-shadow .circle-1,
+#round #house-pick .house-picks .win-shadow .circle-1,
+#round #house-pick .house-picks .lose-shadow .circle-1 {
+    width: 80px;
+    height: 80px;
+  }
+  #round #your-pick .your-picks .win-shadow .circle-2,
+#round #your-pick .your-picks .lose-shadow .circle-2,
+#round #your-pick .house-picks .win-shadow .circle-2,
+#round #your-pick .house-picks .lose-shadow .circle-2,
+#round #house-pick .your-picks .win-shadow .circle-2,
+#round #house-pick .your-picks .lose-shadow .circle-2,
+#round #house-pick .house-picks .win-shadow .circle-2,
+#round #house-pick .house-picks .lose-shadow .circle-2 {
+    width: 60px;
+    height: 60px;
+  }
+  #round #result {
+    grid-area: result;
+    margin: 0;
+  }
+  #round #result h1 {
+    font-size: 10vw;
+  }
+  #round #result .again-btn {
+    font-size: 4vw;
+    padding: 10px 30px;
+  }
+
+  #header {
+    height: 8vh;
+    border-radius: 7px;
+  }
+  #header .logo {
+    height: 8vh;
+  }
+  #header #score-box {
+    height: 8vh;
+    width: 8vh;
+    border-radius: 7px;
+  }
+  #header #score-box .score-text {
+    height: 24px;
+  }
+  #header #score-box #score {
+    font-size: 35px;
+    bottom: 10px;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

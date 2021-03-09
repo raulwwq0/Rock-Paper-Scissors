@@ -1,0 +1,243 @@
+@import 'variables';
+
+@media(max-width: 1000px){
+    #rules{
+        width: 35vw;
+    }
+
+    #round{
+        .your-btn-picked,
+        .house-btn-picked{
+            width: 100px;
+            height: 100px;
+        }
+
+        #your-pick,
+        #house-pick{
+            .your-picks,
+            .house-picks{
+                .pre-shadow{
+                    width: 100px;
+                    height: 100px;
+                }
+
+                .win-shadow,
+                .lose-shadow{
+                    width: 160px;
+                    height: 160px;
+    
+                    .circle-1{
+                        width: 120px;
+                        height: 120px;
+                    }
+    
+                    .circle-2{
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+        
+        .paper-btn,
+        .rock-btn,
+        .scissors-btn,
+        .lizard-btn-extended,
+        .spock-btn-extended {
+            border-width: 15px;
+            img{
+                width: 40%;
+            }
+        }
+
+        #result{
+            h1{
+                font-size: 35px;
+            }
+
+            .again-btn{
+                font-size: 13px;
+                padding: 10px 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    #original-game{
+        width: 250px;
+        height: 250px;
+    }
+
+    #extended-game{
+        width: 300px;
+        height: 300px;
+        margin-top: 15vh;
+    }
+
+    .btn{
+        width: 90px;
+        height: 90px;
+        border-width: 15px;
+        img{
+            width: 40%;
+        }
+    }
+
+    .scissors-btn,
+    .scissors-btn-extended{
+        top: -70px;
+        box-shadow: 0px 4px 0px $scissors-shadow;
+    }
+
+    .lizard-btn-extended{
+        box-shadow: 0px 4px 0px $lizard-shadow;
+    }
+            
+    .lizard-btn-extended,
+    .rock-btn-extended{
+        bottom: -50px;
+    }
+
+    .rock-btn,
+    .rock-btn-extended{
+        left: 185px;
+        box-shadow: 0px 4px 0px $rock-shadow;
+    }
+
+    .paper-btn-extended,
+    .spock-btn-extended{
+        top: 50px;
+    }
+
+    .paper-btn,
+    .paper-btn-extended{
+        left: 255px;
+        box-shadow: 0px 4px 0px $paper-shadow;
+    }
+
+    .spock-btn-extended{
+        left: -70px;
+        box-shadow: 0px 4px 0px $spock-shadow;
+    }
+
+
+    h4{
+        bottom: 0vh;
+    }
+
+    #rules{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+
+        .close-btn{
+            display: block;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            bottom: 10vh;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        #rules-img{
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            height: auto;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        #title{
+            display: block;
+            margin-top: 10vh;
+            h2{
+                text-align: center;
+            }
+        }
+    }
+
+    #round{
+        display: grid;
+        grid-template-areas: 
+            "user house"
+            "result result";
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: 40vh 20vh;
+        justify-items: center;
+
+        #your-pick{
+            grid-area: user;
+            width : 100%;
+        }
+
+        #house-pick{
+            grid-area: house;
+            width : 100%;
+        }
+
+        #your-pick,
+        #house-pick{
+            height: 30vh;
+            .your-picks,
+            .house-picks{
+                .win-shadow,
+                .lose-shadow{
+                    width: 100px;
+                    height: 100px;
+                    .circle-1{
+                        width: 80px;
+                        height: 80px;
+                    }
+                    .circle-2{
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+
+
+        #result{
+            grid-area: result;
+            margin: 0;
+            h1{
+                font-size: 10vw;
+            }
+
+            .again-btn{
+                font-size: 4vw;
+                padding: 10px 30px;
+            }
+        }
+    }
+
+    #header{
+        height: 8vh;
+        border-radius: 7px;
+        .logo{
+            height: 8vh;
+        }
+
+        #score-box{
+            height: 8vh;
+            width: 8vh;
+            border-radius: 7px;
+
+            .score-text{
+                height: 24px;
+            }
+
+            #score{
+                font-size: 35px;
+                bottom: 10px;
+                height: auto;
+            }
+        }
+    }
+}
