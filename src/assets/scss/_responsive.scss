@@ -105,6 +105,11 @@
         box-shadow: 0px 4px 0px $rock-shadow;
     }
 
+    .rock-btn{
+        left: 0px;
+        bottom: -20px;
+    }
+
     .paper-btn-extended,
     .spock-btn-extended{
         top: 50px;
@@ -114,6 +119,10 @@
     .paper-btn-extended{
         left: 255px;
         box-shadow: 0px 4px 0px $paper-shadow;
+    }
+
+    .paper-btn{
+        left: -65px;
     }
 
     .spock-btn-extended{
