@@ -636,10 +636,13 @@ footer #game-mode-btn {
 
   #rules {
     width: 100%;
-    height: 100vh;
+    height: 105vh;
     border-radius: 0;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-rows: 20vh 60vh;
+    align-items: center;
   }
   #rules .close-btn {
     display: block;
@@ -670,7 +673,7 @@ footer #game-mode-btn {
   #round {
     display: grid;
     grid-template-areas: "user house" "result result";
-    grid-template-columns: repeat(2, 40vw);
+    grid-template-columns: repeat(2, 45vw);
     grid-template-rows: 40vh 20vh;
     justify-items: center;
   }
@@ -732,14 +735,14 @@ footer #game-mode-btn {
   }
 
   #header {
-    height: 8vh;
+    height: 9vh;
     border-radius: 7px;
   }
   #header .logo {
-    height: 8vh;
+    height: 9vh;
   }
   #header #score-box {
-    height: 8vh;
+    height: 9vh;
     width: 8vh;
     border-radius: 7px;
   }
@@ -750,6 +753,132 @@ footer #game-mode-btn {
     font-size: 35px;
     bottom: 10px;
     height: auto;
+  }
+}
+@media (max-width: 460px) {
+  #header {
+    width: 75vw;
+  }
+
+  footer #rules-btn,
+footer #game-mode-btn {
+    margin-bottom: 5vh;
+    padding: 10px 0px;
+    width: 35%;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 4vw;
+    bottom: 0;
+  }
+
+  #original-game {
+    width: 200px;
+    height: 200px;
+  }
+
+  #extended-game {
+    width: 220px;
+    height: 220px;
+  }
+
+  .scissors-btn-extended,
+.rock-btn-extended,
+.paper-btn-extended,
+.lizard-btn-extended,
+.spock-btn-extended {
+    width: 70px;
+    height: 70px;
+    border-width: 10px;
+  }
+
+  .paper-btn-extended,
+.spock-btn-extended {
+    top: 25px;
+  }
+
+  .paper-btn-extended {
+    left: 190px;
+  }
+
+  .spock-btn-extended {
+    left: -60px;
+  }
+
+  .lizard-btn-extended,
+.rock-btn-extended {
+    bottom: -45px;
+  }
+
+  .rock-btn-extended {
+    left: 140px;
+  }
+
+  .lizard-btn-extended {
+    left: -10px;
+  }
+
+  #round {
+    grid-template-rows: 30vh 25vh;
+  }
+  #round .your-btn-picked,
+#round .house-btn-picked {
+    width: 80px;
+    height: 80px;
+    border-width: 12px;
+  }
+  #round #your-pick,
+#round #house-pick {
+    height: 25vh;
+  }
+  #round #your-pick .your-picks .pre-shadow,
+#round #your-pick .house-picks .pre-shadow,
+#round #house-pick .your-picks .pre-shadow,
+#round #house-pick .house-picks .pre-shadow {
+    width: 80px;
+    height: 80px;
+  }
+  #round #your-pick .your-picks .win-shadow,
+#round #your-pick .your-picks .lose-shadow,
+#round #your-pick .house-picks .win-shadow,
+#round #your-pick .house-picks .lose-shadow,
+#round #house-pick .your-picks .win-shadow,
+#round #house-pick .your-picks .lose-shadow,
+#round #house-pick .house-picks .win-shadow,
+#round #house-pick .house-picks .lose-shadow {
+    width: 80px;
+    height: 80px;
+  }
+  #round #your-pick .your-picks .win-shadow .circle-1,
+#round #your-pick .your-picks .lose-shadow .circle-1,
+#round #your-pick .house-picks .win-shadow .circle-1,
+#round #your-pick .house-picks .lose-shadow .circle-1,
+#round #house-pick .your-picks .win-shadow .circle-1,
+#round #house-pick .your-picks .lose-shadow .circle-1,
+#round #house-pick .house-picks .win-shadow .circle-1,
+#round #house-pick .house-picks .lose-shadow .circle-1 {
+    width: 65px;
+    height: 65px;
+  }
+  #round #your-pick .your-picks .win-shadow .circle-2,
+#round #your-pick .your-picks .lose-shadow .circle-2,
+#round #your-pick .house-picks .win-shadow .circle-2,
+#round #your-pick .house-picks .lose-shadow .circle-2,
+#round #house-pick .your-picks .win-shadow .circle-2,
+#round #house-pick .your-picks .lose-shadow .circle-2,
+#round #house-pick .house-picks .win-shadow .circle-2,
+#round #house-pick .house-picks .lose-shadow .circle-2 {
+    width: 50px;
+    height: 50px;
+  }
+  #round #result {
+    margin-top: 3vh;
+  }
+  #round #result h1 {
+    font-size: 12vw;
+  }
+  #round #result .again-btn {
+    font-size: 5vw;
+    padding: 15px 50px;
   }
 }
 
