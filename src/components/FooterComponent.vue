@@ -51,12 +51,29 @@ export default {
               .to(".classic-score", {duration: 0, opacity: 1}, '<0')
               .to("#header", {duration: 0.3, y: "0vh"});
       }
+    },
 
-    
+    modeCheck(){
+      const headerTimeline = gsap.timeline();
+      if(document.getElementById("extended-game")){
+        headerTimeline
+              .to("#classic-logo", {duration: 0, opacity: 0})
+              .to("#extended-logo", {duration: 0, opacity: 1}, '<0')
+              .to(".classic-score", {duration: 0, opacity: 0}, '<0')
+              .to(".extended-score", {duration: 0, opacity: 1}, '<0')
+              .to("#header", {duration: 0.3, y: "0vh"});
+
+        this.$store.state.extendedMode = true;
+        console.log(this.$store.state.extendedMode)
+      }
     }
   },
   computed: {
     ...mapState(["extendedMode"]),
+  },
+
+  mounted(){
+    this.modeCheck();
   }
 };
 </script>
