@@ -18,7 +18,7 @@ export default new Vuex.Store({
             }
         },
         DECREASE: (state) => {
-            if ((state.counter > 0) || (state.extendedCounter > 0)){
+            if ((state.counter > 0 && state.counter != 0) || (state.extendedCounter > 0 && state.extendedCounter != 0)){
                 if(!state.extendedMode){
                     state.counter--;
                 } else {
